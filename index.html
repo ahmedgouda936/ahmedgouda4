@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مسابقة المهن والسياحة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="welcome-screen">
+            <h1>مرحباً بك في مسابقة المهن والسياحة</h1>
+            <div class="input-group">
+                <label for="player-name">أدخل اسمك:</label>
+                <input type="text" id="player-name" required>
+                <button onclick="startQuiz()">ابدأ المسابقة</button>
+            </div>
+        </div>
+
+        <div id="quiz-container" style="display: none;">
+            <h2 id="question"></h2>
+            <div id="choices" class="choices-container"></div>
+            <div id="progress">السؤال <span id="current-question">1</span> من 30</div>
+        </div>
+
+        <div id="feedback-message"></div>
+
+        <audio id="correct-sound" src="correct.mp3" preload="auto"></audio>
+        <audio id="wrong-sound" src="wrong.mp3" preload="auto"></audio>
+
+        <div id="result-screen" style="display: none;">
+            <h2>النتيجة النهائية</h2>
+            <p id="final-score"></p>
+            <p id="encouragement-message"></p>
+            <button onclick="location.reload()">إعادة المحاولة</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
